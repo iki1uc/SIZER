@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🔮 DER KOPF · AURA · MANA · 692 RESPOS · BEWEIS</title>
+<title>🧍 STRICHMÄNNCHEN · 9 RESPOS · TANZ · FILM</title>
 
 <style>
 * { box-sizing:border-box; margin:0; padding:0; }
@@ -15,31 +15,27 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 12px;
+  padding: 16px;
   background: radial-gradient(ellipse at 50% 50%, #0a0a1a, #000000);
-  transition: background 0.8s ease;
 }
-
 .container {
-  max-width: 1100px;
+  max-width: 900px;
   width: 100%;
   background: rgba(10,10,20,0.3);
   border: 1px solid rgba(0,204,255,0.05);
   border-radius: 20px;
-  padding: 20px;
+  padding: 24px;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 100px rgba(0,0,0,0.8);
-  transition: border-color 0.8s ease, box-shadow 0.8s ease;
 }
-
 .header {
   text-align: center;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
   border-bottom: 1px solid rgba(255,255,255,0.02);
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 .header h1 {
-  font-size: 26px;
+  font-size: 24px;
   background: linear-gradient(90deg, #00ccff, #ff66ff, #ffaa00, #00ff88);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -50,101 +46,68 @@ body {
   font-size: 11px;
   letter-spacing: 3px;
 }
-.header .sub .kopf { color: #ff66ff; }
-.header .sub .aura { color: #00ccff; }
-.header .sub .mana { color: #00ff88; }
+.header .sub .stick { color: #00ff88; }
+.header .sub .respo { color: #ff66ff; }
 
-.beweis-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 8px;
-  margin-bottom: 12px;
-}
-@media (max-width:700px){ .beweis-grid { grid-template-columns:1fr 1fr; } }
-@media (max-width:450px){ .beweis-grid { grid-template-columns:1fr; } }
-
-.beweis-card {
-  background: rgba(10,10,20,0.3);
-  border: 1px solid rgba(255,255,255,0.02);
-  border-radius: 10px;
-  padding: 12px 10px;
-  text-align: center;
-  transition: all 0.4s ease;
-}
-.beweis-card .icon { font-size: 28px; }
-.beweis-card .name {
-  color: #aab;
-  font-size: 12px;
-  font-weight: bold;
-  margin: 4px 0;
-}
-.beweis-card .value {
-  font-size: 24px;
-  font-weight: bold;
-  font-family: monospace;
-}
-.beweis-card .desc {
-  color: #445555;
-  font-size: 8px;
-  letter-spacing: 1px;
-}
-.beweis-card .status {
-  font-size: 9px;
-  margin-top: 4px;
-}
-.beweis-card .status.on { color: #00ff88; }
-.beweis-card .status.flow { color: #ffaa00; }
-.beweis-card .status.aura { color: #00ccff; }
-
-.holo-wrap {
+.canvas-wrap {
   position: relative;
   width: 100%;
-  max-width: 560px;
+  max-width: 600px;
   margin: 0 auto;
   aspect-ratio: 1/1;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.4);
   border-radius: 16px;
   border: 1px solid rgba(255,255,255,0.02);
   overflow: hidden;
-  box-shadow: inset 0 0 100px rgba(0,204,255,0.01);
 }
-#holoCanvas {
+#stickCanvas {
   width: 100%;
   height: 100%;
   display: block;
 }
 
-.erzeugnis {
-  margin-top: 10px;
-  padding: 10px;
-  background: rgba(0,0,0,0.3);
-  border-radius: 8px;
-  border: 1px solid rgba(255,255,255,0.02);
-  min-height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 13px;
-  color: #00ff88;
-  font-family: monospace;
-  text-align: center;
-  transition: all 0.5s ease;
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 8px;
+  margin-top: 12px;
 }
-.erzeugnis .highlight { color: #ff66ff; }
+@media (max-width:600px){ .info-grid { grid-template-columns:1fr 1fr; } }
+
+.info-card {
+  background: rgba(10,10,20,0.2);
+  border: 1px solid rgba(255,255,255,0.02);
+  border-radius: 8px;
+  padding: 8px 6px;
+  text-align: center;
+  font-size: 9px;
+}
+.info-card .value {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: monospace;
+}
+.info-card .label {
+  color: #445555;
+  font-size: 7px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
 
 .controls {
   display: flex;
-  gap: 4px;
+  gap: 6px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 8px;
+  margin-top: 12px;
 }
 .controls button {
   background: rgba(20,35,35,0.2);
   color: #668888;
   border: 1px solid rgba(255,255,255,0.02);
-  padding: 4px 14px;
-  border-radius: 16px;
+  padding: 5px 16px;
+  border-radius: 18px;
   cursor: pointer;
   font-family: inherit;
   font-size: 9px;
@@ -152,28 +115,24 @@ body {
 }
 .controls button:hover { background: rgba(40,80,70,0.08); color: #aaeedd; }
 .controls button.active { background: rgba(40,80,70,0.06); color: #00ff88; }
-.controls button.kopf { color: #ff66ff; border-color: rgba(255,102,255,0.05); }
-.controls button.aura { color: #00ccff; border-color: rgba(0,204,255,0.05); }
-.controls button.mana { color: #00ff88; border-color: rgba(0,255,136,0.05); }
+.controls button.stick { color: #00ff88; border-color: rgba(0,255,136,0.05); }
+.controls button.respo { color: #ff66ff; border-color: rgba(255,102,255,0.05); }
 
 .status-bar {
   display: flex;
   justify-content: space-between;
   padding: 6px 12px;
-  margin-top: 6px;
+  margin-top: 10px;
   background: rgba(0,0,0,0.2);
   border-radius: 8px;
   font-size: 8px;
   color: #445555;
   border: 1px solid rgba(255,255,255,0.01);
 }
-.status-bar .kopf { color: #ff66ff; }
-.status-bar .aura { color: #00ccff; }
-.status-bar .mana { color: #00ff88; }
 
 .footer {
   text-align: center;
-  margin-top: 8px;
+  margin-top: 10px;
   color: #222;
   font-size: 8px;
   letter-spacing: 2px;
@@ -183,294 +142,289 @@ body {
 </head>
 <body>
 
-<div class="container" id="container">
+<div class="container">
 
 <div class="header">
-  <h1>🔮 DER KOPF · AURA · MANA</h1>
-  <div class="sub"><span class="kopf">692 RESPOS</span> · <span class="aura">AURA</span> · <span class="mana">MANA</span></div>
+  <h1>🧍 STRICHMÄNNCHEN · 9 RESPOS</h1>
+  <div class="sub"><span class="stick">TANZ · FILM</span> · <span class="respo">NONSTOP · 1/2 SEK</span></div>
 </div>
 
-<div class="beweis-grid">
-  <div class="beweis-card">
-    <div class="icon">👤</div>
-    <div class="name">Der Kopf</div>
-    <div class="value" style="color:#ff66ff;" id="kopfStatus">⟳</div>
-    <div class="desc">Hält Aura & Mana</div>
-    <div class="status aura" id="kopfState">● präsent</div>
-  </div>
-  <div class="beweis-card">
-    <div class="icon">🌌</div>
-    <div class="name">Aura</div>
-    <div class="value" style="color:#00ccff;" id="auraValue">0</div>
-    <div class="desc">Die sichtbare Hülle</div>
-    <div class="status aura" id="auraState">● fließt</div>
-  </div>
-  <div class="beweis-card">
-    <div class="icon">💎</div>
-    <div class="name">Mana</div>
-    <div class="value" style="color:#00ff88;" id="manaValue">0</div>
-    <div class="desc">Die innere Kraft</div>
-    <div class="status mana" id="manaState">● lädt</div>
-  </div>
+<div class="canvas-wrap">
+  <canvas id="stickCanvas"></canvas>
 </div>
 
-<div class="holo-wrap">
-  <canvas id="holoCanvas"></canvas>
-</div>
-
-<div class="erzeugnis" id="erzeugnis">
-  ⏳ Der Kopf erzeugt etwas...
+<div class="info-grid">
+  <div class="info-card">
+    <div class="value" id="frameCount" style="color:#00ff88;">0</div>
+    <div class="label">FRAME</div>
+  </div>
+  <div class="info-card">
+    <div class="value" id="respoCount" style="color:#ff66ff;">0</div>
+    <div class="label">RESPOS</div>
+  </div>
+  <div class="info-card">
+    <div class="value" id="fpsDisplay" style="color:#ffaa00;">0</div>
+    <div class="label">FPS</div>
+  </div>
+  <div class="info-card">
+    <div class="value" id="loopDisplay" style="color:#00ccff;">0</div>
+    <div class="label">LOOP</div>
+  </div>
 </div>
 
 <div class="controls">
-  <button class="active kopf" id="btnStart">▶ START</button>
-  <button class="aura" id="btnAura">🌌 AURA</button>
-  <button class="mana" id="btnMana">💎 MANA</button>
-  <button class="kopf" id="btnKopf">👤 KOPF</button>
+  <button class="active stick" id="btnStart">▶ START</button>
+  <button class="respo" id="btnRespo">🔄 RESPO</button>
+  <button class="stick" id="btnShuffle">🔀 SHUFFLE</button>
   <button id="btnProof">🔮 PROOF</button>
   <button id="btnReset">⟲ RESET</button>
 </div>
 
 <div class="status-bar">
-  <span class="kopf">👤 KOPF: <span id="kopfStatusBar">präsent</span></span>
-  <span class="aura">🌌 AURA: <span id="auraStatusBar">fließt</span></span>
-  <span class="mana">💎 MANA: <span id="manaStatusBar">lädt</span></span>
+  <span>🧍 STATUS: <span id="statusText">läuft</span></span>
+  <span>🎯 FRAME: <span id="frameStatus">0</span></span>
+  <span>⏱️ <span id="timeStatus">00:00</span></span>
 </div>
 
 <div class="footer">
-  <span>🔮</span> DER KOPF · AURA · MANA · 692 RESPOS · BEWEIS · <span>wieimmer4u</span>
+  <span>🧍</span> STRICHMÄNNCHEN · 9 RESPOS · TANZ · <span>wieimmer4u</span>
 </div>
 
 </div>
 
 <script>
 // ============================================================
-// DER KOPF · AURA · MANA · 692 RESPOS · BEWEIS
+// STRICHMÄNNCHEN · 9 RESPOS · TANZ · FILM
 // ============================================================
 
 // ===== CANVAS =====
-const canvas = document.getElementById('holoCanvas');
+const canvas = document.getElementById('stickCanvas');
 const ctx = canvas.getContext('2d');
 let running = true;
 let time = 0;
-let aura = 0;
-let mana = 0;
-let kopfActive = true;
-let erzeugnis = '';
+let frame = 0;
+let totalRespos = 0;
+let loopCount = 0;
+let fps = 0;
+let frameCount = 0;
+let fpsTime = 0;
 
-function resizeCanvas() {
-  const rect = canvas.parentElement.getBoundingClientRect();
-  const size = Math.min(rect.width, rect.height, 520);
-  canvas.width = size;
-  canvas.height = size;
-}
-window.addEventListener('resize', resizeCanvas);
+// ===== 9 FRAMES (RESPOS) =====
+// Jeder Frame = 9 RESPOS mit minimalen Änderungen
+const FRAMES = [
+  // Frame 0: Stehen
+  { head: 0, armL: -30, armR: 30, legL: -10, legR: 10, body: 0, tilt: 0 },
+  // Frame 1: Arm leicht gehoben
+  { head: 2, armL: -20, armR: 45, legL: -15, legR: 15, body: 1, tilt: 2 },
+  // Frame 2: Schritt vorne
+  { head: 4, armL: -10, armR: 60, legL: -25, legR: 25, body: 2, tilt: 4 },
+  // Frame 3: Schwung
+  { head: 6, armL: 0, armR: 75, legL: -20, legR: 30, body: 3, tilt: 6 },
+  // Frame 4: Kopf geneigt
+  { head: 8, armL: 10, armR: 70, legL: -10, legR: 35, body: 4, tilt: 8 },
+  // Frame 5: Zurück
+  { head: 6, armL: 20, armR: 60, legL: 0, legR: 30, body: 3, tilt: 6 },
+  // Frame 6: Bein zurück
+  { head: 4, armL: 30, armR: 45, legL: 10, legR: 20, body: 2, tilt: 4 },
+  // Frame 7: Übergang
+  { head: 2, armL: 20, armR: 30, legL: 5, legR: 15, body: 1, tilt: 2 },
+  // Frame 8: Rückkehr
+  { head: 0, armL: 0, armR: 0, legL: 0, legR: 0, body: 0, tilt: 0 }
+];
 
-// ===== 692 RESPOS =====
-const TOTAL_RESPOS = 692;
-let respoState = [];
+// ===== 9 RESPOS PRO FRAME =====
+// Jeder Frame wird in 9 kleine Schritte zerlegt
+function getRespoFrame(frameIndex, respoIndex) {
+  const base = FRAMES[frameIndex % FRAMES.length];
+  const next = FRAMES[(frameIndex + 1) % FRAMES.length];
+  const t = respoIndex / 9; // 0.0 bis 0.888
 
-function initRespos() {
-  respoState = [];
-  for (let i = 0; i < TOTAL_RESPOS; i++) {
-    respoState.push({
-      id: i,
-      active: false,
-      value: Math.random() * 100,
-      type: i % 3 === 0 ? 'aura' : i % 3 === 1 ? 'mana' : 'kopf'
-    });
-  }
-}
+  // Interpolation zwischen base und next
+  const lerp = (a, b, t) => a + (b - a) * t;
 
-// ===== UPDATE =====
-function updateAll() {
-  // Aura wächst
-  aura = Math.min(100, aura + (Math.random() * 2 + 0.5));
-  if (aura >= 100) aura = 0;
-
-  // Mana wächst
-  mana = Math.min(100, mana + (Math.random() * 1.5 + 0.3));
-  if (mana >= 100) mana = 0;
-
-  // Respos aktivieren
-  const activeCount = Math.floor(Math.random() * 50) + 10;
-  for (let i = 0; i < activeCount; i++) {
-    const idx = Math.floor(Math.random() * TOTAL_RESPOS);
-    respoState[idx].active = true;
-    respoState[idx].value = Math.random() * 100;
-  }
-
-  // Respos deaktivieren
-  for (let i = 0; i < 20; i++) {
-    const idx = Math.floor(Math.random() * TOTAL_RESPOS);
-    respoState[idx].active = false;
-  }
-
-  // Erzeugnis bilden
-  const activeRespos = respoState.filter(r => r.active).length;
-  const auraRespos = respoState.filter(r => r.active && r.type === 'aura').length;
-  const manaRespos = respoState.filter(r => r.active && r.type === 'mana').length;
-
-  erzeugnis = `🌌 ${auraRespos} AURA · 💎 ${manaRespos} MANA · 👤 ${activeRespos} aktiv · ${Math.round((activeRespos / TOTAL_RESPOS) * 100)}%`;
-
-  // DOM
-  document.getElementById('auraValue').textContent = Math.round(aura);
-  document.getElementById('manaValue').textContent = Math.round(mana);
-  document.getElementById('kopfStatus').textContent = kopfActive ? '👤' : '⟳';
-
-  document.getElementById('auraState').textContent = aura > 50 ? '● strahlt' : '● fließt';
-  document.getElementById('auraState').className = aura > 50 ? 'status on' : 'status aura';
-
-  document.getElementById('manaState').textContent = mana > 50 ? '● voll' : '● lädt';
-  document.getElementById('manaState').className = mana > 50 ? 'status on' : 'status mana';
-
-  document.getElementById('kopfState').textContent = kopfActive ? '● präsent' : '● abwesend';
-  document.getElementById('kopfState').className = kopfActive ? 'status aura' : 'status flow';
-
-  document.getElementById('erzeugnis').innerHTML = `🔮 <span class="highlight">${erzeugnis}</span>`;
-
-  document.getElementById('kopfStatusBar').textContent = kopfActive ? 'präsent' : 'abwesend';
-  document.getElementById('auraStatusBar').textContent = aura > 50 ? 'strahlt' : 'fließt';
-  document.getElementById('manaStatusBar').textContent = mana > 50 ? 'voll' : 'lädt';
+  return {
+    head: lerp(base.head, next.head, t),
+    armL: lerp(base.armL, next.armL, t),
+    armR: lerp(base.armR, next.armR, t),
+    legL: lerp(base.legL, next.legL, t),
+    legR: lerp(base.legR, next.legR, t),
+    body: lerp(base.body, next.body, t),
+    tilt: lerp(base.tilt, next.tilt, t),
+    progress: t
+  };
 }
 
-// ===== HOLOGRAMM RENDER =====
-function renderHologram(timestamp) {
-  if (!running) return;
-  time = timestamp || Date.now();
-  const w = canvas.width, h = canvas.height;
-  const cx = w/2, cy = h/2;
-  const maxDim = Math.min(w, h);
+// ===== ZEICHNEN =====
+function drawStickman(data, w, h) {
+  const cx = w/2;
+  const cy = h/2;
+  const scale = Math.min(w, h) * 0.15;
+  const tilt = data.tilt * 0.02;
 
   ctx.clearRect(0, 0, w, h);
 
-  // Hintergrund
-  const grad = ctx.createRadialGradient(cx, cy, 10, cx, cy, maxDim * 0.6);
-  grad.addColorStop(0, '#0a0a1a');
-  grad.addColorStop(0.5, '#050510');
-  grad.addColorStop(1, '#000000');
-  ctx.fillStyle = grad;
-  ctx.fillRect(0, 0, w, h);
-
-  // ===== DER KOPF =====
-  const headSize = maxDim * 0.3;
-  const headX = cx;
-  const headY = cy - headSize * 0.1;
-
-  // Aura (äußere Hülle)
-  const auraRadius = headSize * (1.2 + aura / 150);
-  const auraGrad = ctx.createRadialGradient(headX, headY, headSize * 0.3, headX, headY, auraRadius);
-  auraGrad.addColorStop(0, 'rgba(0,204,255,0)');
-  auraGrad.addColorStop(0.3, `rgba(0,204,255,${0.05 + aura / 500})`);
-  auraGrad.addColorStop(0.7, `rgba(0,204,255,${0.08 + aura / 400})`);
-  auraGrad.addColorStop(1, 'rgba(0,204,255,0)');
-  ctx.shadowColor = '#00ccff22';
-  ctx.shadowBlur = 30;
-  ctx.fillStyle = auraGrad;
-  ctx.beginPath();
-  ctx.arc(headX, headY, auraRadius, 0, Math.PI * 2);
-  ctx.fill();
-
-  // Mana (innerer Kern)
-  const manaRadius = headSize * (0.3 + mana / 200);
-  const manaGrad = ctx.createRadialGradient(headX, headY, 2, headX, headY, manaRadius);
-  manaGrad.addColorStop(0, `rgba(0,255,136,${0.3 + mana / 200})`);
-  manaGrad.addColorStop(0.5, `rgba(0,255,136,${0.1 + mana / 300})`);
-  manaGrad.addColorStop(1, 'rgba(0,255,136,0)');
-  ctx.shadowColor = '#00ff8822';
-  ctx.shadowBlur = 30;
-  ctx.fillStyle = manaGrad;
-  ctx.beginPath();
-  ctx.arc(headX, headY, manaRadius, 0, Math.PI * 2);
-  ctx.fill();
-
-  // Kopf-Silhouette (andeutend)
-  ctx.shadowBlur = 0;
-  ctx.strokeStyle = '#ff66ff44';
-  ctx.lineWidth = 1.5;
-
-  // Kopf-Form (andeutend, wie aus der Musiksendung)
-  ctx.beginPath();
-  // Kopf
-  ctx.arc(headX, headY - headSize * 0.05, headSize * 0.5, 0.2, Math.PI - 0.2);
-  // Kinn
-  ctx.quadraticCurveTo(headX + headSize * 0.3, headY + headSize * 0.4, headX, headY + headSize * 0.5);
-  ctx.quadraticCurveTo(headX - headSize * 0.3, headY + headSize * 0.4, headX - headSize * 0.48, headY + headSize * 0.05);
-  ctx.stroke();
-
-  // Auge (andeutend)
-  ctx.fillStyle = '#ff66ff44';
-  ctx.beginPath();
-  ctx.arc(headX - headSize * 0.2, headY - headSize * 0.1, headSize * 0.08, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.beginPath();
-  ctx.arc(headX + headSize * 0.2, headY - headSize * 0.1, headSize * 0.08, 0, Math.PI * 2);
-  ctx.fill();
-
-  // Mund (andeutend)
-  ctx.strokeStyle = '#ff66ff33';
-  ctx.lineWidth = 1;
-  ctx.beginPath();
-  ctx.arc(headX, headY + headSize * 0.2, headSize * 0.15, 0.1, Math.PI - 0.1);
-  ctx.stroke();
-
-  // 692 RESPOS als Punkte
-  const activeRespos = respoState.filter(r => r.active);
-  for (let i = 0; i < Math.min(activeRespos.length, 200); i++) {
-    const r = activeRespos[i];
-    const angle = (r.id / TOTAL_RESPOS) * Math.PI * 2 + time / 5000;
-    const radius = headSize * (0.6 + (r.value / 100) * 0.3);
-    const x = headX + Math.cos(angle + r.id * 0.01) * radius;
-    const y = headY + Math.sin(angle + r.id * 0.01) * radius;
-
-    const color = r.type === 'aura' ? '#00ccff' : r.type === 'mana' ? '#00ff88' : '#ff66ff';
-    const alpha = 0.2 + (r.value / 100) * 0.5;
-    ctx.shadowColor = color + '22';
-    ctx.shadowBlur = 8;
-    ctx.fillStyle = color + Math.floor(alpha * 180).toString(16).padStart(2, '0');
+  // Hintergrund (Karo-Papier)
+  ctx.strokeStyle = 'rgba(255,255,255,0.02)';
+  ctx.lineWidth = 0.5;
+  for (let x = 0; x < w; x += 30) {
     ctx.beginPath();
-    ctx.arc(x, y, 1 + (r.value / 100) * 2, 0, Math.PI * 2);
-    ctx.fill();
+    ctx.moveTo(x, 0);
+    ctx.lineTo(x, h);
+    ctx.stroke();
+  }
+  for (let y = 0; y < h; y += 30) {
+    ctx.beginPath();
+    ctx.moveTo(0, y);
+    ctx.lineTo(w, y);
+    ctx.stroke();
   }
 
-  // Status-Text
+  // Dreieck (Karo-Papier)
+  ctx.strokeStyle = 'rgba(255,255,255,0.03)';
+  ctx.lineWidth = 0.5;
+  ctx.beginPath();
+  ctx.moveTo(cx - scale * 2, cy + scale * 1.5);
+  ctx.lineTo(cx, cy - scale * 2);
+  ctx.lineTo(cx + scale * 2, cy + scale * 1.5);
+  ctx.closePath();
+  ctx.stroke();
+
+  ctx.save();
+  ctx.translate(cx, cy);
+  ctx.rotate(tilt);
+
+  const s = scale;
+
+  // Kopf
+  ctx.shadowColor = '#00ff8844';
+  ctx.shadowBlur = 15;
+  ctx.strokeStyle = '#00ff88';
+  ctx.lineWidth = 2.5;
+  ctx.beginPath();
+  ctx.arc(0, -s * 1.2 + data.head * 0.03 * s, s * 0.25, 0, Math.PI * 2);
+  ctx.stroke();
+
+  // Körper
+  ctx.beginPath();
+  ctx.moveTo(0, -s * 0.9 + data.body * 0.02 * s);
+  ctx.lineTo(0, s * 0.2 + data.body * 0.02 * s);
+  ctx.stroke();
+
+  // Arme
+  ctx.shadowBlur = 10;
+  ctx.lineWidth = 2;
+  // Linker Arm
+  ctx.beginPath();
+  ctx.moveTo(0, -s * 0.7 + data.body * 0.02 * s);
+  ctx.lineTo(-s * 0.6 + data.armL * 0.008 * s, -s * 0.3 + data.body * 0.02 * s);
+  ctx.stroke();
+  // Rechter Arm
+  ctx.beginPath();
+  ctx.moveTo(0, -s * 0.7 + data.body * 0.02 * s);
+  ctx.lineTo(s * 0.6 + data.armR * 0.008 * s, -s * 0.3 + data.body * 0.02 * s);
+  ctx.stroke();
+
+  // Beine
+  ctx.shadowBlur = 8;
+  ctx.lineWidth = 2;
+  // Linkes Bein
+  ctx.beginPath();
+  ctx.moveTo(0, s * 0.2 + data.body * 0.02 * s);
+  ctx.lineTo(-s * 0.3 + data.legL * 0.01 * s, s * 0.7 + data.legL * 0.01 * s);
+  ctx.stroke();
+  // Rechtes Bein
+  ctx.beginPath();
+  ctx.moveTo(0, s * 0.2 + data.body * 0.02 * s);
+  ctx.lineTo(s * 0.3 + data.legR * 0.01 * s, s * 0.7 + data.legR * 0.01 * s);
+  ctx.stroke();
+
+  ctx.restore();
+
+  // Frame Info
   ctx.shadowBlur = 0;
   ctx.fillStyle = '#445555';
-  ctx.font = `${maxDim * 0.015}px monospace`;
-  ctx.textAlign = 'center';
+  ctx.font = '10px monospace';
+  ctx.textAlign = 'left';
   ctx.textBaseline = 'bottom';
-  ctx.fillText(`${activeRespos.length} / ${TOTAL_RESPOS} RESPOS aktiv`, cx, h - 20);
+  ctx.fillText(`Frame ${frame} · RESPO ${totalRespos % 9 + 1}/9`, 10, h - 10);
 
-  // Kopf-Status
-  ctx.fillStyle = kopfActive ? '#ff66ff44' : '#44555544';
-  ctx.font = `${maxDim * 0.015}px monospace`;
-  ctx.textBaseline = 'top';
-  ctx.fillText(kopfActive ? '👤 DER KOPF · PRÄSENT' : '👤 DER KOPF · ABWESEND', cx, 20);
-
-  requestAnimationFrame(renderHologram);
+  // Fortschrittsbalken
+  const progress = data.progress || 0;
+  ctx.fillStyle = 'rgba(255,255,255,0.02)';
+  ctx.fillRect(10, h - 20, 100, 4);
+  ctx.fillStyle = '#00ff8844';
+  ctx.fillRect(10, h - 20, progress * 100, 4);
 }
 
-// ===== TOGGLES =====
-function toggleKopf() {
-  kopfActive = !kopfActive;
-  document.getElementById('btnKopf').classList.toggle('active');
-  document.getElementById('btnKopf').textContent = kopfActive ? '👤 KOPF·ON' : '👤 KOPF·OFF';
-  console.log(`👤 KOPF: ${kopfActive ? 'PRÄSENT' : 'ABWESEND'}`);
+// ===== UPDATE =====
+function update() {
+  // 9 RESPOS pro Frame, 1/2 Sekunde pro Frame
+  // Jede 1/2 Sekunde → nächster Frame
+  const frameDuration = 500; // ms
+  const respoDuration = frameDuration / 9; // ~55ms pro RESPO
+
+  const now = Date.now();
+  const elapsed = now - (fpsTime || now);
+
+  if (elapsed > respoDuration) {
+    totalRespos++;
+    frame = Math.floor(totalRespos / 9) % FRAMES.length;
+    loopCount = Math.floor(totalRespos / (FRAMES.length * 9));
+    fpsTime = now;
+
+    // FPS berechnen
+    frameCount++;
+    if (now - fpsTime > 1000) {
+      fps = frameCount;
+      frameCount = 0;
+      fpsTime = now;
+    }
+
+    updateUI();
+  }
+
+  const respoIndex = totalRespos % 9;
+  const data = getRespoFrame(frame, respoIndex);
+  const w = canvas.width, h = canvas.height;
+  drawStickman(data, w, h);
+
+  requestAnimationFrame(update);
 }
 
-function toggleAura() {
-  aura = Math.min(100, aura + 30);
-  console.log(`🌌 AURA BOOST: ${Math.round(aura)}%`);
+// ===== UI UPDATE =====
+function updateUI() {
+  document.getElementById('frameCount').textContent = frame;
+  document.getElementById('respoCount').textContent = totalRespos % 9 + 1;
+  document.getElementById('fpsDisplay').textContent = fps;
+  document.getElementById('loopDisplay').textContent = loopCount;
+  document.getElementById('frameStatus').textContent = frame;
+  document.getElementById('statusText').textContent = totalRespos > 0 ? 'tanzend' : 'läuft';
 }
 
-function toggleMana() {
-  mana = Math.min(100, mana + 30);
-  console.log(`💎 MANA BOOST: ${Math.round(mana)}%`);
+// ===== RESPO MANUAL =====
+function triggerRespo() {
+  totalRespos++;
+  frame = Math.floor(totalRespos / 9) % FRAMES.length;
+  loopCount = Math.floor(totalRespos / (FRAMES.length * 9));
+  updateUI();
+  console.log(`🔄 RESPO ${totalRespos % 9 + 1}/9 · Frame ${frame}`);
+}
+
+// ===== SHUFFLE =====
+function shuffleRespos() {
+  // Vertausche RESPO-Reihenfolge zufällig
+  for (let i = 0; i < 9; i++) {
+    const idx1 = Math.floor(Math.random() * 9);
+    const idx2 = Math.floor(Math.random() * 9);
+    const temp = FRAMES[idx1];
+    FRAMES[idx1] = FRAMES[idx2];
+    FRAMES[idx2] = temp;
+  }
+  console.log('🔀 SHUFFLE · RESPOS neu gemischt');
 }
 
 // ===== PROOF =====
 function showProof() {
-  const activeRespos = respoState.filter(r => r.active).length;
   const proof = document.createElement('div');
   proof.style.cssText = `
     position: fixed; inset: 0; background: rgba(0,0,0,0.85);
@@ -479,18 +433,18 @@ function showProof() {
     font-family: 'Consolas', monospace;
   `;
   proof.innerHTML = `
-    <div style="text-align:center; padding:40px; border:1px solid rgba(255,102,255,0.1); border-radius:20px; background:rgba(10,10,20,0.6); max-width:450px;">
-      <div style="font-size:48px; color:#ff66ff;">🔮</div>
-      <div style="color:#ff66ff; font-size:20px; margin:12px 0; letter-spacing:4px;">DER KOPF · AURA · MANA</div>
+    <div style="text-align:center; padding:40px; border:1px solid rgba(0,255,136,0.1); border-radius:20px; background:rgba(10,10,20,0.6); max-width:450px;">
+      <div style="font-size:48px; color:#00ff88;">🧍</div>
+      <div style="color:#00ff88; font-size:20px; margin:12px 0; letter-spacing:4px;">STRICHMÄNNCHEN · 9 RESPOS</div>
       <div style="color:#88ddbb; font-size:13px; line-height:1.8;">
-        👤 KOPF: ${kopfActive ? 'PRÄSENT' : 'ABWESEND'}<br>
-        🌌 AURA: ${Math.round(aura)}%<br>
-        💎 MANA: ${Math.round(mana)}%<br>
-        📊 RESPOS: ${activeRespos}/${TOTAL_RESPOS} aktiv<br>
-        🔮 ERZEUGNIS: ${erzeugnis}
+        🎯 FRAME: ${frame}<br>
+        🔄 RESPOS: ${totalRespos % 9 + 1}/9<br>
+        🔁 LOOP: ${loopCount}<br>
+        ⚡ FPS: ${fps}<br>
+        🧍 STATUS: ${totalRespos > 0 ? 'TANZEND' : 'STEHEND'}
       </div>
       <div style="color:#445555; font-size:10px; margin-top:12px; border-top:1px solid rgba(255,255,255,0.02); padding-top:12px;">
-        DER BEWEIS IST SICHTBAR · ETWAS WURDE ERZEUGT
+        9 RESPOS · 1/2 SEK · NONSTOP · FILM
       </div>
       <button onclick="this.parentElement.parentElement.remove()" style="
         margin-top:14px; background:rgba(20,35,35,0.2); color:#668888;
@@ -502,65 +456,57 @@ function showProof() {
   document.body.appendChild(proof);
 }
 
+// ===== RESET =====
+function resetAll() {
+  totalRespos = 0;
+  frame = 0;
+  loopCount = 0;
+  fps = 0;
+  frameCount = 0;
+  document.getElementById('btnStart').classList.remove('active');
+  document.getElementById('statusText').textContent = 'reset';
+  updateUI();
+}
+
 // ===== CONTROLS =====
 document.getElementById('btnStart').addEventListener('click', () => {
   running = true;
   document.getElementById('btnStart').classList.add('active');
-  renderHologram(Date.now());
+  document.getElementById('statusText').textContent = 'läuft';
 });
 
-document.getElementById('btnAura').addEventListener('click', toggleAura);
-document.getElementById('btnMana').addEventListener('click', toggleMana);
-document.getElementById('btnKopf').addEventListener('click', toggleKopf);
+document.getElementById('btnRespo').addEventListener('click', triggerRespo);
+document.getElementById('btnShuffle').addEventListener('click', shuffleRespos);
 document.getElementById('btnProof').addEventListener('click', showProof);
-
-document.getElementById('btnReset').addEventListener('click', () => {
-  running = false;
-  kopfActive = true;
-  aura = 0;
-  mana = 0;
-  initRespos();
-  document.getElementById('btnStart').classList.remove('active');
-  document.getElementById('btnKopf').textContent = '👤 KOPF·ON';
-  document.getElementById('btnKopf').classList.add('active');
-  document.getElementById('kopfStatusBar').textContent = 'präsent';
-  document.getElementById('auraStatusBar').textContent = 'fließt';
-  document.getElementById('manaStatusBar').textContent = 'lädt';
-  setTimeout(() => {
-    running = true;
-    document.getElementById('btnStart').classList.add('active');
-    renderHologram(Date.now());
-  }, 300);
-});
-
-// ===== UPDATE LOOP =====
-let updateInterval = null;
-function startUpdates() {
-  if (updateInterval) clearInterval(updateInterval);
-  updateInterval = setInterval(updateAll, 400);
-}
+document.getElementById('btnReset').addEventListener('click', resetAll);
 
 // ===== TASTATUR =====
 document.addEventListener('keydown', (e) => {
   if (e.key === ' ') { e.preventDefault(); document.getElementById('btnStart').click(); }
-  if (e.key === 'a' || e.key === 'A') document.getElementById('btnAura').click();
-  if (e.key === 'm' || e.key === 'M') document.getElementById('btnMana').click();
-  if (e.key === 'k' || e.key === 'K') document.getElementById('btnKopf').click();
+  if (e.key === 'r' || e.key === 'R') document.getElementById('btnRespo').click();
+  if (e.key === 's' || e.key === 'S') document.getElementById('btnShuffle').click();
   if (e.key === 'p' || e.key === 'P') document.getElementById('btnProof').click();
   if (e.key === 'x' || e.key === 'X') document.getElementById('btnReset').click();
 });
 
+// ===== CANVAS RESIZE =====
+function resizeCanvas() {
+  const rect = canvas.parentElement.getBoundingClientRect();
+  const size = Math.min(rect.width, rect.height, 550);
+  canvas.width = size;
+  canvas.height = size;
+}
+window.addEventListener('resize', resizeCanvas);
+
 // ===== INIT =====
-initRespos();
 resizeCanvas();
 setTimeout(resizeCanvas, 200);
-startUpdates();
-updateAll();
-renderHologram(Date.now());
+updateUI();
+update();
 
-console.log('🔮 DER KOPF · AURA · MANA · 692 RESPOS · BEWEIS');
-console.log('👤 Der Kopf hält Aura & Mana');
-console.log('⌨️  a=AURA  m=MANA  k=KOPF  p=PROOF  x=Reset');
+console.log('🧍 STRICHMÄNNCHEN · 9 RESPOS · TANZ · FILM');
+console.log('🎯 9 FRAMES · 1/2 SEK · NONSTOP');
+console.log('⌨️  Leertaste=Start  r=RESPO  s=SHUFFLE  p=PROOF  x=Reset');
 </script>
 
 </body>
